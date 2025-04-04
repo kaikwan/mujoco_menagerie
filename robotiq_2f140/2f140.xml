@@ -15,16 +15,8 @@
     <mesh class="2f140" file="follower.stl"/>
     <mesh class="2f140" file="coupler.stl"/>
     <mesh class="2f140" scale="0.001 0.001 0.001" file="pad.stl"/>
-    <mesh class="2f140" scale="0.001 0.001 0.001" file="silicone_pad.stl"/>
     <mesh class="2f140" file="spring_link.stl"/>
   </asset>
-
-<!--
-driver = outer knuckle
-coupler = outer finger
-spring_link = inner knuckle
-follower = inner finger
- -->
 
   <default>
     <default class="2f140">
@@ -49,12 +41,8 @@ follower = inner finger
       <default class="collision">
         <geom type="mesh" group="3"/>
         <default class="pad_box1">
-          <geom mass="0" type="box" pos="0 -0.0026 0.028125" size="0.011 0.004 0.009375" friction="0.7"
+          <geom mass="0" type="box" pos="0 0.0457554 -0.0272203" size="0.0135 0.0325 0.00375" friction="0.7"
             solimp="0.95 0.99 0.001" solref="0.004 1" priority="1" rgba="0.55 0.55 0.55 1"/>
-        </default>
-        <default class="pad_box2">
-          <geom mass="0" type="box" pos="0 -0.0026 0.009375" size="0.011 0.004 0.009375" friction="0.6"
-            solimp="0.95 0.99 0.001" solref="0.004 1" priority="1" rgba="0.45 0.45 0.45 1"/>
         </default>
       </default>
     </default>
@@ -95,16 +83,12 @@ follower = inner finger
             <joint name="right_follower_joint" class="follower"/>
             <geom class="visual" mesh="follower" material="black"/>
             <geom class="collision" mesh="follower"/>
-            <body name="right_pad" pos="0 0.012 -0.0294" quat="0.707107 -0.707107 0 0">
-              <geom class="pad_box1" name="right_pad1"/>
-              <geom class="pad_box2" name="right_pad2"/>
+            <body name="right_pad" pos="0 0.012 -0.0276" quat="0.707107 -0.707107 0 0">
               <inertial mass="0.0035" pos="0 -0.0025 0.0185" quat="0.707107 0 0 0.707107"
                 diaginertia="4.73958e-07 3.64583e-07 1.23958e-07"/>
               <geom class="visual" mesh="pad"/>
-              <body name="right_silicone_pad">
-                <geom class="visual" mesh="silicone_pad" material="black"/>
-              </body>
             </body>
+            <geom class="pad_box1" name="right_pad1"/>
           </body>
         </body>
         <!-- Left-hand side 4-bar linkage -->
@@ -134,16 +118,12 @@ follower = inner finger
             <joint name="left_follower_joint" class="follower"/>
             <geom class="visual" mesh="follower" material="black"/>
             <geom class="collision" mesh="follower"/>
-            <body name="left_pad" pos="0 0.012 -0.0294" quat="0.707107 -0.707107 0 0">
-              <geom class="pad_box1" name="left_pad1"/>
-              <geom class="pad_box2" name="left_pad2"/>
+            <body name="left_pad" pos="0 0.012 -0.0276" quat="0.707107 -0.707107 0 0">
               <inertial mass="0.0035" pos="0 -0.0025 0.0185" quat="1 0 0 1"
                 diaginertia="4.73958e-07 3.64583e-07 1.23958e-07"/>
               <geom class="visual" mesh="pad"/>
-              <body name="left_silicone_pad">
-                <geom class="visual" mesh="silicone_pad" material="black"/>
-              </body>
             </body>
+            <geom class="pad_box1" name="left_pad1"/>
           </body>
         </body>
       </body>
