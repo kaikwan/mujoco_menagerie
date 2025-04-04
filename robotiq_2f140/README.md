@@ -1,18 +1,18 @@
-# Robotiq 2F-85 Description (MJCF)
+# Robotiq 2F-140 Description (MJCF)
 
 Requires MuJoCo 2.2.2 or later.
 
 ## Overview
 
-This package contains a simplified robot description (MJCF) of the [Robotiq 85mm
+This package contains a simplified robot description (MJCF) of the [Robotiq 140mm
 2-Finger Adaptive
 Gripper](https://robotiq.com/products/2f85-140-adaptive-robot-gripper) developed
 by [Robotiq](https://robotiq.com/). It is derived from the [publicly available
 URDF
-description](https://github.com/ros-industrial/robotiq/tree/kinetic-devel/robotiq_2f_85_gripper_visualization).
+description](https://github.com/ros-industrial/robotiq/tree/kinetic-devel/robotiq_2f_140_gripper_visualization).
 
 <p float="left">
-  <img src="2f85.png" width="400">
+  <img src="2f140.png" width="400">
 </p>
 
 ## URDF → MJCF derivation steps
